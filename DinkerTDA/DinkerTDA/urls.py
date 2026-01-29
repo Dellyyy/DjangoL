@@ -21,4 +21,5 @@ from mainTDA import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('main/', views.MainFunc),
+    path('register/', views.RegFunc),
 ]
