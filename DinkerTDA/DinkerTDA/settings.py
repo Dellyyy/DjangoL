@@ -122,3 +122,18 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Добавьте в конец settings.py:
+LOGIN_REDIRECT_URL = 'main'
+LOGOUT_REDIRECT_URL = 'login'
+LOGIN_URL = 'login'
+
+# Для сообщений
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.SUCCESS: 'success',
+    messages.ERROR: 'error',
+    messages.INFO: 'info',
+    messages.WARNING: 'warning',
+}
